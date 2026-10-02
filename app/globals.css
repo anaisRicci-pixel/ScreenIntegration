@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Tokens from design.md only. Default Tailwind palettes are reset so off-system values can't be used. */
+@theme {
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-page: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-glass: rgb(255 255 255 / 0.5);
+  --color-heading: #3a3a3a;
+  --color-ink: #5b5b5b;
+  --color-muted: #717171;
+  --color-on-accent: #ffffff;
+  --color-border: #e8e8e8;
+  --color-accent: #ea8c3c;
+  --color-accent-hover: #b5733a;
+
+  --font-*: initial;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-onest), var(--font-inter), system-ui, sans-serif;
+
+  /* Line heights are Inter's "normal" (1.21×) rounded to whole px, as Figma renders it.
+     Chrome rounds ascent and descent separately and would give 20px at 16px instead of 19px. */
+  --text-*: initial;
+  --text-caption: 12px;
+  --text-caption--line-height: 15px;
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 17px;
+  --text-body: 16px;
+  --text-body--line-height: 19px;
+  /* Mobile dialog title only (Figma "Popover" title, mobile variant) — not on design.md's documented scale. */
+  --text-h5: 20px;
+  --text-h5--line-height: 24px;
+  --text-h4: 24px;
+  --text-h4--line-height: 29px;
+  --text-h3: 28px;
+  --text-h3--line-height: 34px;
+  --text-h2: 32px;
+  --text-h2--line-height: 39px;
+  --text-h1: 40px;
+  --text-h1--line-height: 48px;
+  --text-display: 52px;
+  --text-display--line-height: 63px;
+
+  --radius-*: initial;
+  --radius-sm: 8px;
+  --radius-control: 9px;
+  --radius-segment: 10px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-composer: 18px;
+  --radius-prompt: 30px;
+  --radius-full: 9999px;
+
+  --shadow-*: initial;
+  --shadow-rest: 0 5px 25px 0 rgb(0 0 0 / 0.05);
+  --shadow-hover: 0 5px 12.5px 0 rgb(0 0 0 / 0.05);
+  --shadow-menu: 0 4px 8px 0 rgb(0 0 0 / 0.1);
+  --shadow-float: 0 4px 16px 0 rgb(0 0 0 / 0.1);
+  --shadow-composer: 0 5px 24px 0 rgb(0 0 0 / 0.1);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-page);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 19px;
+}
